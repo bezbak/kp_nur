@@ -52,7 +52,7 @@
       }
 
       @media (max-width: 480px) {
-        .label { gap: clamp(0.6rem, 2vw, 1rem); font-size: clamp(6px, 2vw, 9px); }
+        .label { gap: clamp(0.3rem, 1vw, 1rem); font-size: clamp(6px, 1.99vw, 9px); }
       }
     </style>
   </head>
@@ -72,25 +72,25 @@
     <div class="slide">
       <img src="{% static '9.png' %}" />
 
-      <div class="label" style="top: 37%; left: 79%;">
+      <div class="label" style="top: 36%; left: 79%;">
         <span>{{ hwm.hall1_week|space_separated }} сом</span><span>{{ hwm.hall1_month|space_separated }} сом</span>
       </div>
-      <div class="label" style="top: 43%; left: 79%;">
+      <div class="label" style="top: 42%; left: 79%;">
         <span>{{ hwm.hall2_week|space_separated }} сом</span><span>{{ hwm.hall2_month|space_separated }} сом</span>
       </div>
-      <div class="label" style="top: 49%; left: 79%;">
+      <div class="label" style="top: 48%; left: 79%;">
         <span>{{ hwm.hall3_week|space_separated }} сом</span><span>{{ hwm.hall3_month|space_separated }} сом</span>
       </div>
-      <div class="label" style="top: 55%; left: 79%;">
+      <div class="label" style="top: 54%; left: 79%;">
         <span>{{ hwm.hall4_week|space_separated }} сом</span><span>{{ hwm.hall4_month|space_separated }} сом</span>
       </div>
-      <div class="label" style="top: 62%; left: 79%;">
+      <div class="label" style="top: 61%; left: 79%;">
         <span>{{ hwm.hall5_week|space_separated }} сом</span><span>{{ hwm.hall5_month|space_separated }} сом</span>
       </div>
-      <div class="label" style="top: 68%; left: 79%;">
+      <div class="label" style="top: 67%; left: 79%;">
         <span>{{ hwm.hall6_week|space_separated }} сом</span><span>{{ hwm.hall6_month|space_separated }} сом</span>
       </div>
-      <div class="label" style="top: 73%; left: 79%;">
+      <div class="label" style="top: 72%; left: 79%;">
         <span>{{ hwm.hall7_week|space_separated }} сом</span><span>{{ hwm.hall7_month|space_separated }} сом</span>
       </div>
     </div>
@@ -131,9 +131,9 @@
     <!-- 12 PNG (площади / месяц) -->
     <div class="slide">
       <img src="{% static '12.png' %}" />
-      <div class="label" style="color:#1F3558;top: 36.6%; left: 11%;">{{ ba.area_left_month|space_separated }}</div>
-      <div class="label" style="color:#1F3558;top: 37.5%; left: 36%;">{{ ba.area_top_month|space_separated }}</div>
-      <div class="label" style="color:#1F3558;top: 66.5%; left: 37.8%;">{{ ba.area_bottom_month|space_separated }}</div>
+      <div class="label" style="color:#1F3558;top: 36.1%; left: 11%;">{{ ba.area_left_month|space_separated }}</div>
+      <div class="label" style="color:#1F3558;top: 37.1%; left: 36%;">{{ ba.area_top_month|space_separated }}</div>
+      <div class="label" style="color:#1F3558;top: 66.1%; left: 37.8%;">{{ ba.area_bottom_month|space_separated }}</div>
     </div>
 
     <div class="slide">
