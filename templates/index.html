@@ -1,4 +1,5 @@
 {% load static %}
+{% load custom_filters %}
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -72,38 +73,38 @@
       <img src="{% static '9.png' %}" />
 
       <div class="label" style="top: 37%; left: 79%;">
-        <span>{{ hwm.hall1_week }} сом</span><span>{{ hwm.hall1_month }} сом</span>
+        <span>{{ hwm.hall1_week|space_separated }} сом</span><span>{{ hwm.hall1_month|space_separated }} сом</span>
       </div>
       <div class="label" style="top: 43%; left: 79%;">
-        <span>{{ hwm.hall2_week }} сом</span><span>{{ hwm.hall2_month }} сом</span>
+        <span>{{ hwm.hall2_week|space_separated }} сом</span><span>{{ hwm.hall2_month|space_separated }} сом</span>
       </div>
       <div class="label" style="top: 49%; left: 79%;">
-        <span>{{ hwm.hall3_week }} сом</span><span>{{ hwm.hall3_month }} сом</span>
+        <span>{{ hwm.hall3_week|space_separated }} сом</span><span>{{ hwm.hall3_month|space_separated }} сом</span>
       </div>
       <div class="label" style="top: 55%; left: 79%;">
-        <span>{{ hwm.hall4_week }} сом</span><span>{{ hwm.hall4_month }} сом</span>
+        <span>{{ hwm.hall4_week|space_separated }} сом</span><span>{{ hwm.hall4_month|space_separated }} сом</span>
       </div>
       <div class="label" style="top: 62%; left: 79%;">
-        <span>{{ hwm.hall5_week }} сом</span><span>{{ hwm.hall5_month }} сом</span>
+        <span>{{ hwm.hall5_week|space_separated }} сом</span><span>{{ hwm.hall5_month|space_separated }} сом</span>
       </div>
       <div class="label" style="top: 68%; left: 79%;">
-        <span>{{ hwm.hall6_week }} сом</span><span>{{ hwm.hall6_month }} сом</span>
+        <span>{{ hwm.hall6_week|space_separated }} сом</span><span>{{ hwm.hall6_month|space_separated }} сом</span>
       </div>
       <div class="label" style="top: 73%; left: 79%;">
-        <span>{{ hwm.hall7_week }} сом</span><span>{{ hwm.hall7_month }} сом</span>
+        <span>{{ hwm.hall7_week|space_separated }} сом</span><span>{{ hwm.hall7_month|space_separated }} сом</span>
       </div>
     </div>
 
     <!-- 10 PNG (7 строк: разовая стоимость по залам) -->
     <div class="slide">
       <img src="{% static '10.png' %}" />
-      <div class="label" style="top: 37%; left: 78%;">{{ hs.hall1 }} сом</div>
-      <div class="label" style="top: 43%; left: 78%;">{{ hs.hall2 }} сом</div>
-      <div class="label" style="top: 49%; left: 78%;">{{ hs.hall3 }} сом</div>
-      <div class="label" style="top: 55%; left: 78%;">{{ hs.hall4 }} сом</div>
-      <div class="label" style="top: 61%; left: 78%;">{{ hs.hall5 }} сом</div>
-      <div class="label" style="top: 67%; left: 78%;">{{ hs.hall6 }} сом</div>
-      <div class="label" style="top: 73%; left: 78%;">{{ hs.hall7 }} сом</div>
+      <div class="label" style="top: 37%; left: 78%;">{{ hs.hall1|space_separated }} сом</div>
+      <div class="label" style="top: 43%; left: 78%;">{{ hs.hall2|space_separated }} сом</div>
+      <div class="label" style="top: 49%; left: 78%;">{{ hs.hall3|space_separated }} сом</div>
+      <div class="label" style="top: 55%; left: 78%;">{{ hs.hall4|space_separated }} сом</div>
+      <div class="label" style="top: 61%; left: 78%;">{{ hs.hall5|space_separated }} сом</div>
+      <div class="label" style="top: 67%; left: 78%;">{{ hs.hall6|space_separated }} сом</div>
+      <div class="label" style="top: 73%; left: 78%;">{{ hs.hall7|space_separated }} сом</div>
     </div>
 
     <!-- 11 PNG (билеты/карты + LED неделя/месяц) -->
@@ -111,28 +112,28 @@
       <img src="{% static '11.png' %}" />
 
       <!-- Слева: обратная сторона билета / дисконт -->
-      <div class="label" style="top: 48%; left: 37%;">{{ pl.ticket_100k }} сом</div>
-      <div class="label" style="top: 54%; left: 37%;">{{ pl.ticket_500k }} сом</div>
-      <div class="label" style="top: 77%; left: 37%;">{{ pl.discount_cards_5000 }} сом</div>
+      <div class="label" style="top: 48%; left: 37%;">{{ pl.ticket_100k|space_separated }} сом</div>
+      <div class="label" style="top: 54%; left: 37%;">{{ pl.ticket_500k|space_separated }} сом</div>
+      <div class="label" style="top: 77%; left: 37%;">{{ pl.discount_cards_5000|space_separated }} сом</div>
 
       <!-- Справа: LED (неделя / месяц) -->
       <div class="label" style="top: 48%; left: 82%;">
-        <span>{{ pl.led_cash_week }} сом</span><span>{{ pl.led_cash_month }} сом</span>
+        <span>{{ pl.led_cash_week|space_separated }} сом</span><span>{{ pl.led_cash_month|space_separated }} сом</span>
       </div>    
       <div class="label" style="top: 54%; left: 82%;">
-        <span>{{ pl.led_bar_week }} сом</span><span>{{ pl.led_bar_month }} сом</span>
+        <span>{{ pl.led_bar_week|space_separated }} сом</span><span>{{ pl.led_bar_month|space_separated }} сом</span>
       </div>
       <div class="label" style="top: 61%; left: 82%;">
-        <span>{{ pl.led_inside_week }} сом</span><span>{{ pl.led_inside_month }} сом</span>
+        <span>{{ pl.led_inside_week|space_separated }} сом</span><span>{{ pl.led_inside_month|space_separated }} сом</span>
       </div>
     </div>
 
     <!-- 12 PNG (площади / месяц) -->
     <div class="slide">
       <img src="{% static '12.png' %}" />
-      <div class="label" style="color:#1F3558;top: 36.6%; left: 12.6%;">{{ ba.area_left_month }}</div>
-      <div class="label" style="color:#1F3558;top: 37.5%; left: 37%;">{{ ba.area_top_month }}</div>
-      <div class="label" style="color:#1F3558;top: 66.5%; left: 38.8%;">{{ ba.area_bottom_month }}</div>
+      <div class="label" style="color:#1F3558;top: 36.6%; left: 11%;">{{ ba.area_left_month|space_separated }}</div>
+      <div class="label" style="color:#1F3558;top: 37.5%; left: 36%;">{{ ba.area_top_month|space_separated }}</div>
+      <div class="label" style="color:#1F3558;top: 66.5%; left: 37.8%;">{{ ba.area_bottom_month|space_separated }}</div>
     </div>
 
     <div class="slide">
